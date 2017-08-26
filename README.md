@@ -14,7 +14,7 @@ Exploring the node hapi server
 - [ ] server.log
 - [x] autogenerate docs w lout or swagger
 - [x] edit data w mongoose
-- [ ] cookies
+- [ ] [cookies](https://hapijs.com/tutorials/cookies?lang=en_US)
 - [ ] try [cache option](https://github.com/hapijs/hapi/blob/master/API.md#requestseturlurl-stripTrailingSlash)
 
 # api test

@@ -1,7 +1,7 @@
 'use strict';
 
 exports.register = function (server, options, next) {
-  console.log('logger called');
+  console.log('logger ccccalled');
   next();
 };
 
