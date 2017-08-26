@@ -1,0 +1,7 @@
+{
+  "serverConnection": {
+    "host": "localhost",
+    "port": 8000
+  },
+  "dbConnection": "mongodb://localhost/hapi-test"
+}
