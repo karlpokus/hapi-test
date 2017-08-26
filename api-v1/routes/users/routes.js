@@ -5,23 +5,28 @@ const handlers = require('./handlers');
 module.exports = [
   {
     method: 'GET',
-    path: '/',
-    handler: handlers.findUsers,
-    config: {
-      description: 'get users',
-      notes: 'The base path for the users api',
-      tags: ['users', 'api']
-    }
+    path: '/{name?}',
+    handler: handlers.findUsers
   },
   {
     method: 'POST',
     path: '/',
-    handler: handlers.createUser,
-    config: {
+    handler: handlers.createUser
+    /*config: {
       payload: {
         parse: true,
         output: 'data'
       }
-    }
+    }*/
+  },
+  {
+    method: 'PUT',
+    path: '/{name?}',
+    handler: handlers.updateUser
+  },
+  {
+    method: 'DELETE',
+    path: '/{name}',
+    handler: handlers.deleteUser
   }
 ];

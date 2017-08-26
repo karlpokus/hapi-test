@@ -10,15 +10,18 @@ mongoose.Promise = global.Promise;
 mongoose.connect(config.dbConnection, { useMongoClient: true });
 
 // server
-const server = new Hapi.Server();
-server.connection(config.serverConnection);
-server.register({
-  register: userRoutes
-}, {
-  routes: {
-    prefix: '/api/v1/users'
+const server = new Hapi.Server({
+  connections: {
+    router: { stripTrailingSlash: true }
   }
 });
+server.connection(config.serverConnection);
+server.register([
+  {
+    register: userRoutes,
+    routes: { prefix: '/api/v1/users' }
+  }
+]);
 server.start((err) => {
   if (err) { throw err; }
   console.log('Server running at:', server.info.uri);

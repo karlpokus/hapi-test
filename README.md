@@ -12,13 +12,27 @@ Exploring the node hapi server
 - [ ] serve/stream html
 - [ ] error handling
 - [ ] server.log
-- [ ] autogenerate docs w lout or swagger
+- [x] autogenerate docs w lout or swagger
 - [x] edit data w mongoose
+- [ ] cookies
+- [ ] try [cache option](https://github.com/hapijs/hapi/blob/master/API.md#requestseturlurl-stripTrailingSlash)
 
-# test
+# api test
+Requires mongo running. See `curl.js` for api details.
+
 ```bash
+# run with PM2
 $ npm start
-$ node curl.js <method> [<data>]
+# test api
+$ node curl.js <method> <path> [<data>]
+```
+
+# swagger
+Because the UI looks like shit and I can't find a way to pass params - I'm just gonna save the setup below
+```bash
+# https://github.com/glennjones/hapi-swagger
+$ npm i hapi-swagger inert vision
+# pass each module to `server.register` and add `description` and `notes` under config in routes
 ```
 
 # license
