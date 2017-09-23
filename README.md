@@ -16,6 +16,8 @@ Exploring the node hapi server
 - [x] edit data w mongoose
 - [ ] [cookies](https://hapijs.com/tutorials/cookies?lang=en_US)
 - [ ] try [cache option](https://github.com/hapijs/hapi/blob/master/API.md#requestseturlurl-stripTrailingSlash)
+- [x] add createdAt as default and updatedAt in hook
+- [ ] add route-logging to PM2
 
 # api test
 Requires mongo running. See `curl.js` for api details.
