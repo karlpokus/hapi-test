@@ -1,5 +1,9 @@
 'use strict';
 
+const apm = require('elastic-apm').start({
+  appName: 'hapi-test'
+})
+
 const Hapi = require('hapi');
 const config = require('./config');
 const userRoutes = require('./api-v1/routes/users');

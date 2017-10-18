@@ -18,6 +18,7 @@ Exploring the node hapi server
 - [ ] try [cache option](https://github.com/hapijs/hapi/blob/master/API.md#requestseturlurl-stripTrailingSlash)
 - [x] add createdAt as default and updatedAt in hook
 - [ ] add route-logging to PM2
+- [x] add agent for [elastic apm](https://www.elastic.co/guide/en/apm/get-started/current/install-and-run.html)
 
 # api test
 Requires mongo running. See `curl.js` for api details.
